@@ -66,9 +66,22 @@ my-macroquad-game/
 
   ```sh
   sh scripts/itch.sh
+```
 
-  ```
+* Verify the WASM build & script
+```sh
+  cd ./web
+
+  # Start a local server and check it out at: http://localhost:8000/
+  python3 -m http.server 8000
+
+```
+
+* Alternatively, or maybe on top of testing the /web directory, it's worth extracting the new .zip file to a new location and testing in a similar fashion (spin up a local server and verify things are running as anticipated)
+
 * Then upload web_{{project-name}}.zip as embedded app 
+
+|> Anticipate assets being a bottleneck with filepath funkyness - play around: copy to different directories, remove asset directories altogether (flatten asset directory tree to root) etc
 
 ## Contributing
 
