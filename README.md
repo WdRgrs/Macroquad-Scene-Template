@@ -23,11 +23,12 @@ A simple scene-management template to quickly spin up a new Macroquad project. I
 Generate a new project from this template:
 
 ```sh
+# Pro-tip: definitely generate a cooler name than uncool-name, if possible
 cargo generate \
   --git https://github.com/WdRgrs/Macroquad-Scene-Template.git \
-  --name cool-name
+  --name uncool-name
 
-cd cool-name
+cd uncool-name
 
 cargo run
 ```
