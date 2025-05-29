@@ -1,6 +1,6 @@
 # Macroquad Scene Template
 
-A simple scene & state-management template to quickly spin up a new Macroquad project. It scaffolds a directory structure, includes handy build & deploy scripts for itch.io, and supports easy customization via **cargo-generate**.
+A simple scene-management template to quickly spin up a new Macroquad project. It scaffolds a directory structure, includes handy build & deploy scripts, and supports easy customization via **cargo-generate**.
 
 ## Features
 
@@ -25,8 +25,10 @@ Generate a new project from this template:
 ```sh
 cargo generate \
   --git https://github.com/WdRgrs/Macroquad-Scene-Template.git \
-  --name my-macroquad-game
-cd my-macroquad-game
+  --name cool-name
+
+cd cool-name
+
 cargo run
 ```
 
@@ -34,10 +36,10 @@ cargo run
 
 ```
 my-macroquad-game/
-├── assets/
+├── assets/    # Asset storage, asset handling should be managed in src/
 │   ├── fonts/
 │   └── sounds/
-├── scripts/
+├── scripts/   # More platforms to comes (WIP)
 │   └── itch.sh
 ├── src/
 │   ├── scenes/
@@ -50,7 +52,7 @@ my-macroquad-game/
 │   └── main.rs
 ├── target/
 ├── web/
-│   └── ... # WASM & web assets
+│   └── ... # WASM & web assets as an easy .zip target
 ├── Cargo.lock
 ├── Cargo.toml
 ├── .gitignore
@@ -64,13 +66,9 @@ my-macroquad-game/
   ```sh
   sh scripts/itch.sh
 
-  <!-- Then upload web_{{project-name}}.zip as embedded app -->
   ```
+* Then upload web_{{project-name}}.zip as embedded app 
 
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or pull requests to improve this template.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
