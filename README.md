@@ -86,3 +86,10 @@ my-macroquad-game/
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or pull requests to improve this template.
+
+
+## How to (Scenes)
+Scenes are managed through src/scene/manager: 
+- startup, update, draw, and cleanup are expected traits, and of course scenes can extend past these.
+- Transitions happen when a value is assigned to next_scene OR the update function returns an instance of the GameScene Enum. I find it most convenient to conditionally set the value of next_scene when I'm ready for transitions.
+- Added a basic script for quickly building and deploying to itch - will probably add more scripts for quickly deploying to other platofrms in the future (Desktop, then possibly Mobile).
