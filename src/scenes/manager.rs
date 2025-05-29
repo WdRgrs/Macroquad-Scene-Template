@@ -1,7 +1,7 @@
 use macroquad::prelude::*;
 use std::collections::HashMap;
 
-use super::{Scene, AboutScene, GameScene, TemplateScene};
+use super::{AboutScene, GameScene, Scene, TemplateScene};
 
 pub struct SceneManager {
     scenes: HashMap<GameScene, Box<dyn Scene>>,

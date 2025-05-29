@@ -1,8 +1,8 @@
 use macroquad::prelude::*;
 
 mod app;
-mod ui;
 mod scenes;
+mod ui;
 
 use app::App;
 
@@ -21,7 +21,6 @@ fn window_conf() -> Conf {
 
 #[macroquad::main(window_conf)]
 async fn main() {
-    // set_pc_assets_folder("assets");
     // init game & run
     let mut app = App::new().await;
 

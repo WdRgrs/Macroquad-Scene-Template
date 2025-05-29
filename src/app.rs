@@ -25,7 +25,7 @@ impl App {
     pub async fn run(&mut self) {
         loop {
             self.update();
-            
+
             self.draw();
 
             next_frame().await;

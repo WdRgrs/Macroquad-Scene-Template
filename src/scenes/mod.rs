@@ -2,8 +2,8 @@ pub mod about;
 pub mod manager;
 pub mod template;
 
-pub use manager::SceneManager;
 pub use about::AboutScene;
+pub use manager::SceneManager;
 pub use template::TemplateScene;
 
 #[derive(Debug, Hash, PartialEq, Eq)]

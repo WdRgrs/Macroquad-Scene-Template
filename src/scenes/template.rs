@@ -1,20 +1,19 @@
-use macroquad::prelude::*;
 use crate::scenes::GameScene;
 use crate::scenes::Scene;
 use crate::ui::draw_title;
+use macroquad::prelude::*;
 
 pub struct TemplateScene {
-    next_scene: Option<GameScene>
+    next_scene: Option<GameScene>,
 }
 
 impl Scene for TemplateScene {
     fn initialize() -> Self {
-        let scene = Self {
-          next_scene: None
-        };
+        let scene = Self { next_scene: None };
 
         scene
     }
+    
     fn update(&mut self) -> Option<GameScene> {
         if is_key_pressed(KeyCode::A) {
             self.next_scene = Some(GameScene::About)
@@ -31,6 +30,7 @@ impl Scene for TemplateScene {
     fn startup(&mut self) {
         println!("- - - - template scene is starting - - - -");
     }
+
     fn cleanup(&mut self) {
         println!("-- template scene is getting cleaned up --");
     }
