@@ -1,7 +1,7 @@
 use macroquad::prelude::*;
 use std::collections::HashMap;
 
-use super::{AboutScene, GameScene, Scene, TemplateScene};
+use super::{MainScene, GameScene, Scene, TemplateScene};
 
 pub struct SceneManager {
     scenes: HashMap<GameScene, Box<dyn Scene>>,
@@ -13,8 +13,8 @@ impl SceneManager {
     pub async fn new() -> Self {
         let scenes: HashMap<GameScene, Box<dyn Scene + 'static>> = HashMap::new();
 
-        // Initialize with About scene
-        let current_scene = GameScene::About;
+        // Initialize with Main scene
+        let current_scene = GameScene::Main;
 
         let mut manager = Self {
             scenes,
@@ -33,8 +33,8 @@ impl SceneManager {
             Box::new(TemplateScene::initialize()) as Box<dyn Scene>,
         );
         self.scenes.insert(
-            GameScene::About,
-            Box::new(AboutScene::initialize()) as Box<dyn Scene>,
+            GameScene::Main,
+            Box::new(MainScene::initialize()) as Box<dyn Scene>,
         );
     }
 

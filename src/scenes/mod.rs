@@ -1,14 +1,14 @@
-pub mod about;
+pub mod main;
 pub mod manager;
 pub mod template;
 
-pub use about::AboutScene;
+pub use main::MainScene;
 pub use manager::SceneManager;
 pub use template::TemplateScene;
 
 #[derive(Debug, Hash, PartialEq, Eq)]
 pub enum GameScene {
-    About,
+    Main,
     Template,
 }
 

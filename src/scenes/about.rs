@@ -3,11 +3,11 @@ use crate::scenes::Scene;
 use crate::ui::draw_title;
 use macroquad::prelude::*;
 
-pub struct AboutScene {
+pub struct MainScene {
     next_scene: Option<GameScene>,
 }
 
-impl Scene for AboutScene {
+impl Scene for MainScene {
     fn initialize() -> Self {
         let scene = Self { next_scene: None };
 
@@ -23,14 +23,14 @@ impl Scene for AboutScene {
     }
 
     fn draw(&self) {
-        draw_title("About Scene", "T")
+        draw_title("Main Scene", "T")
     }
 
     fn startup(&mut self) {
-        println!("About scene started!");
+        println!("Main scene started!");
     }
 
     fn cleanup(&mut self) {
-        println!("About scene cleaned up!");
+        println!("Main scene cleaned up!");
     }
 }

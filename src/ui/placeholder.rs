@@ -8,7 +8,7 @@ pub fn draw_title(text: &str, key: &str) {
     draw_text(text, x, screen_height() * 0.4, font_size, BEIGE);
 
     let destination = match key {
-        "A" => "About",
+        "A" => "Main",
         "T" => "Template",
         _ => "Unknown Scene",
     };

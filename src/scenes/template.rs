@@ -16,7 +16,7 @@ impl Scene for TemplateScene {
     
     fn update(&mut self) -> Option<GameScene> {
         if is_key_pressed(KeyCode::A) {
-            self.next_scene = Some(GameScene::About)
+            self.next_scene = Some(GameScene::Main)
         }
 
         self.next_scene.take()
