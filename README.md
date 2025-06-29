@@ -64,7 +64,7 @@ my-macroquad-game/
 
 * **Build WASM & deploy to itch.io**:
 
-  ```sh
+```sh
   sh scripts/itch.sh
 ```
 
